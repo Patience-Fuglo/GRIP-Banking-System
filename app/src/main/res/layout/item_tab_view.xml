@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/TabTextStyle"
+    android:drawablePadding="@dimen/margin_8"
+    android:drawableLeft="@drawable/ic_bank_icon"
+    android:drawableTint="@color/colorPrimary"
+    android:text="@string/label_phone_contacts"/>

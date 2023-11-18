@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardCreditCard"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_16"
+    android:clipToPadding="false"
+    app:cardBackgroundColor="@color/colorAccent"
+    app:cardElevation="@dimen/margin_8"
+    app:cardUseCompatPadding="false"
+    app:contentPadding="0dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintMain"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/margin_16">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/imgCardLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/margin_8"
+            android:textColor="@color/colorPrimaryAlpha"
+            android:drawableTint="@color/colorPrimaryAlpha"
+            android:layout_margin="@dimen/margin_8"
+            android:drawableLeft="@drawable/ic_bank_logo_1"
+            android:text="GRIP"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/kotak_logo" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/txtBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/margin_16"
+            android:gravity="right"
+            android:layout_marginTop="@dimen/margin_8"
+            android:fontFamily="@font/poppins_medium"
+            android:text="BALANCE"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimaryAlpha"
+            android:textSize="@dimen/text_tiny_6"
+            app:layout_constraintEnd_toEndOf="@+id/txtBalanceValue"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/txtBalanceValue"
+            android:layout_width="wrap_content"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginRight="@dimen/margin_22"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingEnd="@dimen/margin_16"
+            android:text="\u20B9 498000.00"
+            android:textColor="@color/colorPrimaryAlpha"
+            android:textSize="@dimen/text_tiny_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/imgCardLogo"
+            app:layout_constraintTop_toBottomOf="@id/txtBalance" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/txtCardNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_22"
+            android:layout_marginRight="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:fontFamily="@font/creditcard"
+            android:text="1234 0000 0099 0909"
+            android:textColor="@color/colorSecondaryAlpha"
+            android:textSize="@dimen/text_tiny_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtBalanceValue" />
+
+        <LinearLayout
+            android:id="@+id/btnClose"
+            android:layout_width="@dimen/margin_30"
+            android:layout_height="@dimen/margin_30"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/semi_circle_white_button"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/txtCardNumber"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgClose"
+                android:layout_width="@dimen/margin_12"
+                android:layout_height="@dimen/margin_12"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_8"
+                app:srcCompat="@drawable/ic_close" />
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/txtValidThru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/label_valid_thru"
+            android:textAllCaps="true"
+            android:textColor="@color/colorCreditCardText"
+            android:textSize="@dimen/text_tiny_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtCardNumber" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/txtValidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8"
+            android:fontFamily="@font/creditcard"
+            android:text="12/20"
+            android:textColor="@color/colorSecondaryAlpha"
+            android:textSize="@dimen/text_tiny_10"
+            app:layout_constraintBottom_toBottomOf="@+id/txtValidThru"
+            app:layout_constraintStart_toEndOf="@id/txtValidThru"
+            app:layout_constraintTop_toTopOf="@+id/txtValidThru" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/txtCardHolderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8"
+            android:fontFamily="@font/poppins_medium"
+            android:paddingBottom="@dimen/margin_16"
+            android:text="Novum Logic"
+            android:textAllCaps="true"
+            android:textColor="@color/colorCreditCardText"
+            android:textSize="@dimen/text_tiny_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtValidThru" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imgVisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:paddingEnd="@dimen/margin_22"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/txtBalanceValue"
+            app:layout_constraintTop_toBottomOf="@+id/txtValidity"
+            app:srcCompat="@drawable/ic_visa_pay_logo" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

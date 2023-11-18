@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow>
+
+        <GRIP.payment.customview.MonthItem
+            android:id="@+id/itemJan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:layout_weight="1"
+            app:monthNumber="1" />
+
+        <GRIP.payment.customview.MonthItem
+            android:id="@+id/itemFeb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:layout_weight="1"
+            app:monthNumber="2" />
+
+        <GRIP.payment.customview.MonthItem
+            android:id="@+id/itemMar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:layout_weight="1"
+            app:monthNumber="3" />
+
+        <GRIP.payment.customview.MonthItem
+            android:id="@+id/itemApril"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:layout_weight="1"
+            app:monthNumber="4" />
+
+    </TableRow>
+
+    <TableRow android:gravity="center">
+
+        <GRIP.payment.customview.MonthItem
+            android:id="@+id/itemMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:layout_weight="1"
+            app:monthNumber="5" />
+
+        <GRIP.payment.customview.MonthItem
+            android:id="@+id/itemJune"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:layout_weight="1"
+            app:monthNumber="6" />
+
+        <GRIP.payment.customview.MonthItem
+            android:id="@+id/itemJuly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:layout_weight="1"
+            app:monthNumber="7" />
+
+        <GRIP.payment.customview.MonthItem
+            android:id="@+id/itemAug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:layout_weight="1"
+            app:monthNumber="8" />
+    </TableRow>
+
+    <TableRow android:gravity="center">
+
+        <GRIP.payment.customview.MonthItem
+            android:id="@+id/itemSept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:layout_weight="1"
+            app:monthNumber="9" />
+
+        <GRIP.payment.customview.MonthItem
+            android:id="@+id/itemOct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:layout_weight="1"
+            app:monthNumber="10" />
+
+        <GRIP.payment.customview.MonthItem
+            android:id="@+id/itemNov"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:layout_weight="1"
+            app:monthNumber="11" />
+
+        <GRIP.payment.customview.MonthItem
+            android:id="@+id/itemDec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:layout_weight="1"
+            app:monthNumber="12" />
+    </TableRow>
+</TableLayout>

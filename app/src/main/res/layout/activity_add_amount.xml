@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_8"
+                android:tint="@color/colorSecondary"
+                app:srcCompat="@drawable/ic_arrow_back" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/toolbarTitle"
+                style="@style/BoldTitleStyle"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_8"
+                android:text="@string/label_amount" />
+
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/margin_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/imgContact"
+                android:layout_width="@dimen/size_40"
+                android:layout_height="@dimen/size_40"
+                android:layout_margin="@dimen/margin_16"
+                app:actualImageResource="@drawable/ic_avatar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderImage="@drawable/ic_avatar"
+                app:roundAsCircle="true" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtContactName"
+                style="@style/BoldSubTitleStyle"
+                android:layout_margin="@dimen/margin_8"
+                android:text="Alice"
+                app:layout_constraintStart_toEndOf="@id/imgContact"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtContactPhone"
+                style="@style/AppTextStyle"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:drawableLeft="@drawable/ic_call_black"
+                android:drawablePadding="@dimen/margin_8"
+                android:text="91 9898989878"
+                android:textColor="@color/colorSecondary"
+                app:layout_constraintStart_toEndOf="@id/imgContact"
+                app:layout_constraintTop_toBottomOf="@id/txtContactName" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtContactAccountNo"
+                style="@style/AppTextStyle"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:drawableLeft="@drawable/ic_bank_icon"
+                android:drawablePadding="@dimen/margin_8"
+                android:text="1234567890986545"
+                android:textColor="@color/colorSecondary"
+                app:layout_constraintStart_toEndOf="@id/imgContact"
+                app:layout_constraintTop_toBottomOf="@id/txtContactPhone" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_16"
+                app:cardCornerRadius="@dimen/margin_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtContactAccountNo">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_8">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtEnterAmount"
+                        style="@style/BoldSubTitleStyle"
+                        android:text="@string/label_enter_amount" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtDollar"
+                        style="@style/BoldTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rupee"
+                        android:textSize="@dimen/text_grand_64"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtEnterAmount" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        style="@style/BoldTitleStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_16"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:textSize="@dimen/text_grand_64"
+                        app:layout_constraintBottom_toBottomOf="@id/txtDollar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/txtDollar"
+                        app:layout_constraintTop_toBottomOf="@id/txtEnterAmount" />
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtDebitFrom"
+                style="@style/BoldSubTitleStyle"
+                android:layout_margin="@dimen/margin_16"
+                android:text="@string/label_debit_from"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardAmount" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardAccountsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8"
+                app:cardCornerRadius="@dimen/margin_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtDebitFrom">
+
+                <RadioGroup
+                    android:id="@+id/radioGroupAccounts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_8">
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_bank_logo_1"
+                        android:drawablePadding="@dimen/margin_8"
+                        android:drawableTint="@color/colorBadge"
+                        android:layoutDirection="rtl"
+                        android:padding="@dimen/margin_8"
+                        android:text="XXXX XXXX XXXX X908" />
+
+                    <android.support.v7.widget.AppCompatRadioButton
+                        style="@style/RadioStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_bank_logo_2"
+                        android:drawablePadding="@dimen/margin_8"
+                        android:drawableTint="@color/colorBadge"
+                        android:layoutDirection="rtl"
+                        android:padding="@dimen/margin_8"
+                        android:text="XXXX XXXX XXXX X619" />
+
+                </RadioGroup>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtAddAccount"
+                style="@style/BoldSubTitleStyle"
+                android:layout_margin="@dimen/margin_16"
+                android:text="@string/label_add_new_bank_account"
+                android:textColor="#64d5e2"
+                android:textSize="@dimen/text_large_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardAccountsList" />
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/btnSend"
+                style="@style/AppButtons"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:text="@string/label_send"
+                app:backgroundTint="@color/colorButtonBg"
+                app:cornerRadius="@dimen/margin_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAddAccount" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

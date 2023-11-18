@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GRIP.payment.customview.CreditCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/creditCardView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_8"
+    app:cardBalanceValue="450000"
+    app:cardCornerRadius="@dimen/margin_8"
+    app:cardHolderName="Novum Logic"
+    app:cardNumber="1234 5678 7890 4567"
+    app:cardValidity="12/20"
+    app:isCreditCardForGrid="false"
+    app:cardVisaImage="@drawable/ic_visa_pay_logo"
+    app:creditCardLogo="@drawable/kotak_logo" />

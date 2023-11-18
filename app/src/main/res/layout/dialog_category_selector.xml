@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_white_rect"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/margin_22"
+    android:paddingEnd="@dimen/margin_22"
+    android:paddingTop="@dimen/margin_8"
+    android:paddingBottom="@dimen/margin_8">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txtMobileUtility"
+        style="@style/AppTextStyle"
+        android:layout_margin="@dimen/margin_8"
+        android:textSize="@dimen/text_medium_12"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ic_utility_phone"
+        android:text="@string/label_mobile" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txtElectricityUtility"
+        style="@style/AppTextStyle"
+        android:layout_margin="@dimen/margin_8"
+        android:layout_width="match_parent"
+        android:textSize="@dimen/text_medium_12"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ic_utility_electricity"
+        android:text="@string/label_electricity" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txtBroadbandUtility"
+        style="@style/AppTextStyle"
+        android:layout_margin="@dimen/margin_8"
+        android:textSize="@dimen/text_medium_12"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ic_utility_broadband"
+        android:gravity="center"
+        android:text="@string/label_broadband" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txtGasUtility"
+        android:layout_margin="@dimen/margin_8"
+        style="@style/AppTextStyle"
+        android:textSize="@dimen/text_medium_12"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:drawableTop="@drawable/ic_utility_gas"
+        android:text="@string/label_gas" />
+</LinearLayout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_8"
+                app:srcCompat="@drawable/ic_logo" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/toolbarTitle"
+                style="@style/BoldTitleStyle"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_8"
+                android:text="@string/label_settings" />
+
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar">
+
+        <LinearLayout
+            android:padding="@dimen/margin_8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtPersonalInformation"
+                style="@style/BoldSubTitleStyle"
+                android:text="@string/label_personal_information" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardPersonalInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8"
+                app:cardCornerRadius="@dimen/margin_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtPersonalInformation">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_8">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtUserName"
+                        style="@style/ProfileAppTextStyle"
+                        android:layout_margin="@dimen/margin_16"
+                        android:text="Novum Logic"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtEditName"
+                        style="@style/EditLabelStyle"
+                        android:text="@string/label_edit"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtUserEmail"
+                        style="@style/ProfileAppTextStyle"
+                        android:layout_margin="@dimen/margin_16"
+                        android:text="hello@hello.com"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtUserName" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtEditEmail"
+                        style="@style/EditLabelStyle"
+                        android:text="@string/label_edit"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtEditName" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtUserDob"
+                        style="@style/ProfileAppTextStyle"
+                        android:layout_margin="@dimen/margin_16"
+                        android:text="12-09-1990"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtUserEmail" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtEditDob"
+                        style="@style/EditLabelStyle"
+                        android:text="@string/label_edit"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtEditEmail" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtUserAddress"
+                        style="@style/ProfileAppTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_margin="@dimen/margin_16"
+                        android:gravity="left"
+                        android:text="Flat, Street, Landmark, Area, City, State, Country"
+                        app:layout_constraintEnd_toStartOf="@id/txtEditAddress"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtUserDob" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtEditAddress"
+                        style="@style/EditLabelStyle"
+                        android:text="@string/label_edit"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtEditDob" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtSecurity"
+                        style="@style/ProfileAppTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_margin="@dimen/margin_16"
+                        android:gravity="left"
+                        android:text="Security"
+                        app:layout_constraintEnd_toStartOf="@id/imgGoToSecurity"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtUserAddress" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/imgGoToSecurity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_16"
+                        android:tint="@color/colorSecondary"
+                        app:layout_constraintBottom_toBottomOf="@+id/txtSecurity"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/txtSecurity"
+                        app:srcCompat="@drawable/ic_keyboard_arrow_right" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtManageAccounts"
+                        style="@style/ProfileAppTextStyle"
+                        android:layout_width="0dp"
+                        android:layout_margin="@dimen/margin_16"
+                        android:gravity="left"
+                        android:text="@string/label_manage_accounts"
+                        app:layout_constraintEnd_toStartOf="@id/txtEditAddress"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtSecurity" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/imgManageAccounts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_16"
+                        android:tint="@color/colorSecondary"
+                        app:layout_constraintBottom_toBottomOf="@+id/txtManageAccounts"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/txtManageAccounts"
+                        app:srcCompat="@drawable/ic_keyboard_arrow_right" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardShareInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8"
+                app:cardCornerRadius="@dimen/margin_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardPersonalInfo">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_8">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/imgGift"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_16"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_gift" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/txtShareGift"
+                        style="@style/BoldSubTitleStyle"
+                        android:text="@string/label_share_the_gift_of_love"
+                        app:layout_constraintStart_toStartOf="@+id/btnShare"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <android.support.design.button.MaterialButton
+                        android:id="@+id/btnShare"
+                        style="@style/AppButtonsWithoutMargin"
+                        android:layout_width="0dp"
+                        android:layout_margin="@dimen/margin_16"
+                        android:backgroundTint="@color/colorButtonBg"
+                        android:text="@string/label_share"
+                        app:cornerRadius="@dimen/margin_16"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/imgGift"
+                        app:layout_constraintTop_toBottomOf="@id/txtShareGift" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>

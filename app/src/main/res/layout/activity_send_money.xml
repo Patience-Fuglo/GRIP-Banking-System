@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_8"
+                android:tint="@color/colorSecondary"
+                app:srcCompat="@drawable/ic_arrow_back" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/toolbarTitle"
+                style="@style/BoldTitleStyle"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_8"
+                android:text="@string/label_send_money" />
+
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        app:cardCornerRadius="@dimen/margin_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/edtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:cursorVisible="true"
+            android:hint="@string/hint_search_send_money"
+            android:inputType="number"
+            android:padding="@dimen/margin_8"
+            android:textSize="@dimen/text_medium_12" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        app:cardCornerRadius="@dimen/margin_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardSearch">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/optionsTab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_size"
+            app:tabBackground="@drawable/option_selection_selector"
+            app:tabIndicatorHeight="0dp"
+            app:tabInlineLabel="true"
+            app:tabSelectedTextColor="@color/colorPrimary" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_16"
+        app:cardCornerRadius="@dimen/margin_16"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddBeneficiary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardSelection">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerContacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/btnAddBeneficiary"
+        style="@style/AppButtonsWithoutMargin"
+        android:text="@string/label_add_beneficiary"
+        app:backgroundTint="@color/colorButtonBg"
+        app:cornerRadius="@dimen/margin_16"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:layout_marginTop="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardList" />
+
+</android.support.constraint.ConstraintLayout>

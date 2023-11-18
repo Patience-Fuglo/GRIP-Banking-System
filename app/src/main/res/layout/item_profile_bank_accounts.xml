@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_2">
+
+    <GRIP.payment.customview.CreditCardView
+        android:id="@+id/creditCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorBadge"
+        app:cardBalanceValue="450000"
+        app:cardCornerRadius="@dimen/margin_8"
+        app:cardHolderName="Novum Logic"
+        app:cardNumber="1234 5678 7890 4567"
+        app:cardValidity="12/20"
+        app:cardVisaImage="@drawable/ic_visa_pay_logo"
+        app:creditCardLogo="@drawable/kotak_logo"
+        app:isCreditCardForGrid="true" />
+
+   <!-- <LinearLayout
+        android:id="@+id/btnClose"
+        android:layout_width="@dimen/margin_30"
+        android:layout_height="@dimen/margin_30"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/margin_8"
+        android:background="@drawable/semi_circle_white_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imgClose"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_width="@dimen/margin_12"
+            android:layout_height="@dimen/margin_12"
+            app:srcCompat="@drawable/ic_close" />
+    </LinearLayout>-->
+
+</android.support.constraint.ConstraintLayout>

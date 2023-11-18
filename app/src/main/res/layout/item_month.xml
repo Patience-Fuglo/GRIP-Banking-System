@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_16">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txtMonthNumber"
+        android:layout_width="@dimen/margin_32"
+        android:layout_height="@dimen/margin_32"
+        android:text="1"
+        android:fontFamily="@font/creditcard"
+        android:gravity="center"
+        android:background="@drawable/send_money_icon"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/txtMonthName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="January"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/colorTertiary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtMonthNumber" />
+</android.support.constraint.ConstraintLayout>

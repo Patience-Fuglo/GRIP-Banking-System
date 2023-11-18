@@ -4,10 +4,10 @@ Overview
 Welcome to the GRIP Banking System Application! This Android application is designed to provide a seamless banking experience with features like a contact list, bank account selection, send and receive money options, bank card management, and utility bill payments for services such as mobile, electricity, and gas.
 
 # Features
-# 1. Contact List
+## 1. Contact List
 Easily manage your contacts within the application, making it convenient to send money to friends and family.
 
-# 2. Bank Account Selection
+## 2. Bank Account Selection
 Link multiple bank accounts to your profile and seamlessly switch between them for various transactions.
 
 # 3. Send Money

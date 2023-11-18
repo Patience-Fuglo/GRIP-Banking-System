@@ -3,7 +3,7 @@
 Overview
 Welcome to the GRIP Banking System Application! This Android application is designed to provide a seamless banking experience with features like a contact list, bank account selection, send and receive money options, bank card management, and utility bill payments for services such as mobile, electricity, and gas.
 
-Features
+# Features
 1. Contact List
 Easily manage your contacts within the application, making it convenient to send money to friends and family.
 
@@ -25,7 +25,7 @@ Choose from various payment options, including bank transfers, card payments, an
 7. Utility Payments
 Pay your mobile, electricity, and gas bills directly through the application. Enjoy the convenience of managing all your payments in one place.
 
-Getting Started
+# Getting Started
 Prerequisites
 Android Studio installed on your machine.
 An Android device or emulator running Android OS version X.X or above.
@@ -34,14 +34,14 @@ Clone this repository to your local machine.
 
 bash
 Copy code
-git clone https://github.com/your-username/grip-banking-app.git
+git clone https://github.com/Patience-Fuglo/GRIP-Banking-System
 Open the project in Android Studio.
 
 Connect your Android device or launch an emulator.
 
 Build and run the application.
 
-Usage
+# Usage
 Login or Create an Account: Start by logging into your existing account or creating a new one.
 
 Navigate Through Features: Explore the various features such as contact list, bank accounts, send/receive money, bank card management, and utility payments.

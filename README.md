@@ -32,7 +32,7 @@ An Android device or emulator running Android OS version X.X or above.
 ### Installation
 Clone this repository to your local machine.
 
-# bash
+# Bash
 Copy code
 git clone https://github.com/Patience-Fuglo/GRIP-Banking-System
 Open the project in Android Studio.
